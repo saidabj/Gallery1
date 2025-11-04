@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Galerie d'images</title>
+    <style>
+        #image {
+            width: 600px;
+            height: 400px;
+            border: 2px solid #ccc;
+            text-align: center;
+            line-height: 400px;
+            background-size: cover;
+            background-position: center;
+            color: #555;
+            font-size: 18px;
+        }
+
+        img.preview {
+            width: 150px;
+            margin: 10px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        img.preview:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="image">Survolez une image ci-dessous pour l’afficher ici</div>
+
+    <img class="preview" alt="Paysage de montagne" src="https://picsum.photos/id/1018/200/150"
+        onmouseover="upDate(this)" onmouseout="unDo()">
+    <img class="preview" alt="Forêt brumeuse" src="https://picsum.photos/id/1020/200/150" onmouseover="upDate(this)"
+        onmouseout="unDo()">
+    <img class="preview" alt="Plage au coucher du soleil" src="https://picsum.photos/id/1003/200/150"
+        onmouseover="upDate(this)" onmouseout="unDo()">
+
+    <script src="script.js"></script>
+</body>
+
+</html>
